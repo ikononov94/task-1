@@ -1,0 +1,133 @@
+.section__title
+  font-size 2.5rem
+  padding 5rem 0 2rem 0
+
+.expectations-blocks
+  position relative
+  & .label-input-pagination
+    display none
+
+.expectations-input
+  display none
+
+
+.background_gradient
+  background linear-gradient(to bottom right, topGradientColor, bottomGradientColor)
+
+.expectations-blocks__title
+  font-size 1.5rem
+
+.expectations-blocks__top
+  margin-bottom 10px
+
+.expectations-blocks__top
+.expectations-blocks__bottom
+  display: flex
+  justify-content: space-between
+
+.block-freedom
+.block-equality
+.block-brotherhood
+.block-placement
+  min-height 150px
+  padding 20px
+  display flex
+  flex-direction column
+  justify-content: space-between
+
+.block-freedom
+  flex 2 1
+.block-equality
+  margin-left 10px
+  flex 1 1
+
+.block-placement
+  flex 2 1
+.block-brotherhood
+  margin-right 10px
+  flex 1 1
+
+.label-input-pagination
+  position absolute
+
+  & label
+    cursor pointer
+    height 12px
+    width 12px
+    border-radius 50%
+    background-color color-orange
+    transition background ease-in-out .5s
+
+.expectations-blocks__pagination-4_horizontal
+  bottom 0
+  left 50%
+  margin-left -59px
+  & label
+    display inline-block
+    margin-right 20px
+
+    &:nth-of-type(4)
+      margin-right 0
+
+.label-input-pagination label:hover
+#expectations-block-slide1:checked ~ .label-input-pagination label:nth-of-type(1)
+#expectations-block-slide2:checked ~ .label-input-pagination label:nth-of-type(2)
+#expectations-block-slide3:checked ~ .label-input-pagination label:nth-of-type(3)
+#expectations-block-slide4:checked ~ .label-input-pagination label:nth-of-type(4)
+  background-color #000
+
+#expectations-block-slide1:checked ~ .expectations-blocks__top > .block-freedom
+#expectations-block-slide2:checked ~ .expectations-blocks__top > .block-equality
+#expectations-block-slide3:checked ~ .expectations-blocks__bottom > .block-brotherhood
+#expectations-block-slide4:checked ~ .expectations-blocks__bottom > .block-placement
+  opacity 1
+  z-index 1
+
+/***********************************START EXPECTATIONS MEDIA*******************************************/
+
+@media(min-width 550px) and (max-width 949px)
+  .section__title
+    margin-left 32px
+    margin-right 32px
+  .block-freedom
+    margin 0 0 0 32px
+    flex 3 1
+  .block-equality
+    margin 0 32px 0 10px
+    flex 2 1
+
+  .block-placement
+    margin 0 32px 0 10px
+    flex 3 1
+  .block-brotherhood
+    margin 0 0 0 32px
+    flex 2 1
+
+@media(max-width 549px)
+  .expectations-blocks .label-input-pagination
+    display block
+
+  .expectations-blocks
+    height 230px
+
+  .section__title
+    font-size 2rem
+    margin-left 20px
+    margin-right 20px
+
+  .block-freedom
+  .block-equality
+  .block-placement
+  .block-brotherhood
+    position absolute
+    width 270px
+    z-index 0
+    opacity 0
+    left 50%
+    margin-left -155px
+    transition opacity ease-in-out .5s
+
+  .expectations-blocks__top
+    margin-bottom 0
+
+/***********************************END EXPECTATIONS MEDIA*******************************************/

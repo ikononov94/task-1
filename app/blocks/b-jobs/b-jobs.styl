@@ -1,0 +1,265 @@
+
+.jobs-block
+.jobs-block-even
+  display flex
+  justify-content space-between
+  margin-bottom 5rem
+
+.jobs-block__title
+  font-size 24px
+  margin-right 20px
+
+/******************************************SLIDER START************************************************/
+
+.jobs-block__slider
+  position relative
+
+.jobs-block__slides
+  width 610px
+  height 290px
+
+.slide
+  width 584px
+  height inherit
+  position absolute
+  z-index 0
+  opacity 0
+  transition opacity ease-in-out .5s
+.block1-slide1
+  background url(../../blocks/b-jobs/b-jobs/webcom1_704px.jpg) no-repeat
+.block1-slide2
+  background url(../../blocks/b-jobs/b-jobs/webcom2_704px.jpg) no-repeat
+.block1-slide3
+  background url(../../blocks/b-jobs/b-jobs/webcom3_704px.jpg) no-repeat
+.block1-slide4
+  background url(../../blocks/b-jobs/b-jobs/webcom4_704px.jpg) no-repeat
+.block2-slide1
+  background url(../../blocks/b-jobs/b-jobs/anvanto1_704px.jpg) no-repeat
+.block2-slide2
+  background url(../../blocks/b-jobs/b-jobs/anvanto2_704px.jpg) no-repeat
+.block2-slide3
+  background url(../../blocks/b-jobs/b-jobs/anvanto3_704px.jpg) no-repeat
+.block3-slide1
+  background url(../../blocks/b-jobs/b-jobs/game1_704px.jpg) no-repeat
+.block3-slide2
+  background url(../../blocks/b-jobs/b-jobs/game2_704px.jpg) no-repeat
+
+.block1-slide1
+.block1-slide2
+.block1-slide3
+.block1-slide4
+.block2-slide1
+.block2-slide2
+.block2-slide3
+.block3-slide1
+.block3-slide2
+  background-size cover
+  cursor pointer
+  box-shadow 0 0 40px rgba(0,0,0,1)
+
+#jobs-block1-slide1:checked ~ .label-input-pagination label:nth-of-type(1)
+#jobs-block1-slide2:checked ~ .label-input-pagination label:nth-of-type(2)
+#jobs-block1-slide3:checked ~ .label-input-pagination label:nth-of-type(3)
+#jobs-block1-slide4:checked ~ .label-input-pagination label:nth-of-type(4)
+#jobs-block2-slide1:checked ~ .label-input-pagination label:nth-of-type(1)
+#jobs-block2-slide2:checked ~ .label-input-pagination label:nth-of-type(2)
+#jobs-block2-slide3:checked ~ .label-input-pagination label:nth-of-type(3)
+#jobs-block3-slide1:checked ~ .label-input-pagination label:nth-of-type(1)
+#jobs-block3-slide2:checked ~ .label-input-pagination label:nth-of-type(2)
+  background-color #000
+
+#jobs-block1-slide1:checked ~ .jobs-block__slides > .block1-slide1
+#jobs-block1-slide2:checked ~ .jobs-block__slides > .block1-slide2
+#jobs-block1-slide3:checked ~ .jobs-block__slides > .block1-slide3
+#jobs-block1-slide4:checked ~ .jobs-block__slides > .block1-slide4
+#jobs-block2-slide1:checked ~ .jobs-block__slides > .block2-slide1
+#jobs-block2-slide2:checked ~ .jobs-block__slides > .block2-slide2
+#jobs-block2-slide3:checked ~ .jobs-block__slides > .block2-slide3
+#jobs-block3-slide1:checked ~ .jobs-block__slides > .block3-slide1
+#jobs-block3-slide2:checked ~ .jobs-block__slides > .block3-slide2
+  opacity 1
+  z-index 1
+
+/**************************************SLIDER END*********************************************/
+
+.jobs-input
+  display none
+
+.jobs-block__pagination-4_vertical
+.jobs-block__pagination-2_vertical
+  right 0
+  top 50%
+  & label
+    display block
+    margin-bottom 20px
+
+.jobs-block__pagination-4_vertical
+  margin-top -54px
+  & label:nth-of-type(4)
+    margin 0
+
+.jobs-block__pagination-2_vertical
+  margin-top -22px
+  & label:nth-of-type(2)
+    margin 0
+
+.jobs-block-even__pagination-3_vertical
+  left 0
+  top 50%
+  margin-top -32px
+  & label
+    display block
+    margin-bottom 20px
+    &:nth-of-type(3)
+      margin 0
+
+.jobs-block-even
+  & .slide
+    right 0
+  & .jobs-block__about
+    margin 0 30px 0 0
+
+
+
+.jobs-block__about
+  margin-left 30px
+  display flex
+  flex-direction column
+  justify-content space-between
+
+.section-link_orange
+  color color-orange
+  text-decoration none
+
+
+/***************************START JOBS MEDIA*********************************************/
+
+
+@media(max-width 970px)
+  .jobs-block
+    flex-direction column-reverse
+
+  .jobs-block-even
+    flex-direction column
+
+    &__pagination-3_horizontal
+      left 50%
+      margin 0 0 0 -42px
+      & label
+        display inline-block
+        margin 0 20px 0 0
+        &:nth-of-type(3)
+          margin 0
+
+  .jobs-block__about-top
+  .jobs-block__about-bottom
+    flex 1 1
+
+  .jobs-block__pagination-4_horizontal
+    right 50%
+    margin-right -59px
+    & label
+      display inline-block
+      margin 0 20px 0 0
+      &:nth-of-type(4)
+        margin 0
+  .jobs-block__pagination-2_horizontal
+    right 50%
+    margin-right -22px
+    & label
+      display inline-block
+      margin 0 20px 0 0
+      &:nth-of-type(2)
+        margin 0
+
+@media (min-width 768px) and (max-width 970px)
+
+
+  .jobs-block-even__pagination-3_horizontal
+    top 370px
+  .jobs-block__pagination-4_horizontal
+    top 425px
+  .jobs-block__pagination-2_horizontal
+    top 390px
+
+  .jobs-block__slider
+    width 704px
+    height 380px
+    margin-top 20px
+    left 50%
+    margin-left -352px
+
+  .jobs-block__slides
+    width 704px
+    height 350px
+
+  .slide
+    width 704px
+
+
+
+@media (min-width 550px) and (max-width 970px)
+
+  .jobs-block-even .jobs-block__about
+  .jobs-block__about
+    flex-direction row
+    margin 0 32px
+
+@media (max-width 549px)
+  .jobs-block-even .jobs-block__about
+  .jobs-block__about
+    flex-direction row
+    margin 0 20px
+
+@media (max-width 767px)
+  .jobs-block__about
+    flex-direction column
+  .jobs-block-even .jobs-block__about
+    flex-direction column
+  .jobs-block__about-bottom
+    margin-top 20px
+
+
+@media (min-width 550px) and (max-width 767px)
+  .jobs-block__pagination-4_horizontal
+    top 290px
+  .jobs-block__pagination-2_horizontal
+    top 255px
+  .jobs-block-even__pagination-3_horizontal
+    top 235px
+
+  .jobs-block__slider
+    width 490px
+    height 230px
+    margin-top 20px
+    left 50%
+    margin-left -245px
+
+  .jobs-block__slides
+    width 490px
+    height 220px
+
+  .slide
+    width 490px
+
+@media (max-width 549px)
+  .jobs-block__pagination-4_horizontal
+    top 220px
+  .jobs-block__pagination-2_horizontal
+    top 190px
+  .jobs-block-even__pagination-3_horizontal
+    top 170px
+  .jobs-block__slider
+    width 304px
+    height 180px
+    margin-top 20px
+    left 50%
+    margin-left -152px
+
+  .jobs-block__slides
+    width 304px
+    height 151px
+
+  .slide
+    width 304px
+/***************************END JOBS MEDIA*********************************************/

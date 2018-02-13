@@ -1,0 +1,128 @@
+.contacts
+  padding-bottom 5rem
+.contacts-block
+  display flex
+  flex-direction row
+
+.contacts-block__info
+  flex 2 1
+
+.contacts-block__form
+  flex 3 1
+
+.contacts-block__info-description
+  width 280px
+  margin-bottom 30px
+
+.contacts__social-title
+  margin-bottom 10px
+
+.social-ul
+  padding 0
+  list-style none
+.social-li
+  display flex
+  aling-items center
+  margin-bottom 5px
+  &:before
+    content ' '
+    display inline-block
+    width 20px
+    height 20px
+    background-color #c3c3c3;
+    margin-right 5px
+
+.contacts-form__name
+.contacts-form__email
+.contacts-form__message
+.contacts-form__send
+  box-sizing border-box
+  width 100%
+  border-radius 4px
+
+.contacts-form__name
+.contacts-form__email
+.contacts-form__message
+  font-size 1rem
+  border 1px solid #fff
+  padding-left 10px
+  &:focus
+    outline none
+    border 1px solid color-orange
+    transition border .5s ease-in-out
+
+.contacts-form__name
+.contacts-form__email
+  height 3rem
+  margin-bottom 20px
+.contacts-form__message
+  height 192px
+  margin-bottom 10px
+  resize none
+  padding-top 10px
+
+.contacts-form__send
+  height 3rem
+  font-size 1rem
+  background-color color-orange
+  color #fff
+  border 1px solid color-orange
+  cursor pointer
+  &:hover
+    background-color darken(#DD3E18, 10%)
+    transition all .5s ease
+  &:focus
+    outline none
+
+.contacts-form__file
+  position relative
+  font-size 1rem
+  cursor pointer
+  margin-bottom 30px
+  color color-orange
+  background transparent
+  border none
+  padding 0
+  &:before
+    content url(../../blocks/b-contats/b-contacts/icon-file.png)
+    margin-right 5px
+  &:focus
+    outline none
+
+/****************************START CONTACTS MEDIA**********************************/
+
+@media (min-width 550px) and (max-width 970px)
+  .contacts-block
+    flex-direction column
+  .contacts-block__info
+    display flex
+    flex-direction row
+    margin 0 32px 20px 32px
+  .contacts-block__info-description
+    flex 2 1
+  .contacts-block__info-social
+    flex 1 1
+  .contacts__description
+    max-width 400px
+  .contacts__social-title
+    display none
+  .contacts-block__form
+    margin 0 32px
+
+@media(max-width 549px)
+  .contacts-block
+    flex-direction column
+  .contacts-block__info
+    display flex
+    flex-direction column-reverse
+    margin 0 20px 20px 20px
+  .contacts-block__form
+    margin 0 20px
+  .contacts__social-title
+    display none
+  .social-ul
+    margin-bottom 20px
+  .contacts-block__info-description
+    width 100%
+
+/****************************END CONTACTS MEDIA**********************************/

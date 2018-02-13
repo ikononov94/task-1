@@ -1,0 +1,94 @@
+.main
+  position relative
+  height: 672px
+  background-color mainBgColor
+  display flex
+  justify-content center
+
+.about-me
+  position: relative;
+  width calc(1440px - 675px);
+  padding 60px
+
+.about-me__job
+.about-me__name
+.about-me__description
+  display: block
+  color #fff
+
+.about-me__photo
+  margin-right 0
+  border-radius 50%
+  display: none
+
+.about-me__job
+  font-size 1.5rem
+  font-weight 500
+
+.about-me__name
+  line-height 2
+  font-size 2.5rem
+  font-weight 800
+
+.about-me__description
+  width 500px
+  font-size 1.25rem
+  position absolute
+  left 60px
+  bottom 60px
+
+.main__photo
+  width: 675px
+  height: inherit
+  background url(../../blocks/b-main/b-main/photo.jpg) no-repeat
+
+/**************************************START MAIN MEDIA****************************************/
+
+@media(min-width 769px) and (max-width 1024px)
+  .about-me
+    width calc(1024px - 424px)
+
+  .main__photo
+    width 424px
+    background url(../../blocks/b-main/b-main/photo424px.jpg) no-repeat
+
+
+@media(max-width 875px)
+  .main__photo
+    display none
+
+  .about-me
+    width 100%
+    text-align center
+    padding 20px 20px 0 20px
+
+  .about-me__description
+    font-size 1.1rem
+    position static
+    padding-top 40px
+    margin 0 auto
+
+  .about-me__photo
+    display inline-block
+    margin-top 20px
+
+@media(min-width 550px) and (max-width 875px)
+  .main
+    height 768px
+
+@media(max-width 549px)
+  html
+    font-size 14px
+  .main
+    height 550px
+  .about-me__description
+    width 100%
+    font-size 1rem
+  .about-me__name
+    margin-top 10px
+    line-height 1.5
+
+  .about-me__photo
+    width 200px
+
+/**************************************END MAIN MEDIA****************************************/
